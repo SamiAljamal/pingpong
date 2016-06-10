@@ -5,6 +5,9 @@ var pingPong = function(number){
     if (i%3===0){
       indicator += "ping" + "<br>";
 
+    }else if (i% 5 === 0){
+      indicator += "pong" + "<br>";
+
     }else{
       indicator += i + "<br>";
     }
