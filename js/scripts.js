@@ -1,9 +1,15 @@
 //business logic
 var indicator ='';
 var pingPong = function(number){
-  for(var i= 0; i<= number; i++){
-    indicator += i + "<br>";
-    
+  for(var i= 1; i<= number; i++){
+    if (i%3===0){
+      indicator += "ping" + "<br>";
+
+    }else{
+      indicator += i + "<br>";
+    }
+
+
 
 
   }
