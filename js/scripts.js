@@ -22,11 +22,19 @@ $(document).ready(function(){
     event.preventDefault();
     var complete = false;
     var number= $("input#number").val();
+    debugger;
+    var numPat= /^[0-9]*$/gm;
+    var tester= numPat.test(number);
     var result = pingPong(number);
     if (number === ""){
-      $("#answers").text("please enter a number").show();
+      $("#debug").text("please enter a number").show();
 
-    }else{$("#answers").append(result).show();}
+    }else if (tester === false) {
+      $("#debug").text("please make sure you only enter numbers").show();
+    }else{
+      $("#answers").append(result).show();
+      $("debug").hide();
+    }
 
 
 
