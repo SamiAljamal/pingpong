@@ -12,10 +12,8 @@ var pingPong = function(number){
       indicator += "<li>" + i + "</li>";
     }
   }
-
-  return indicator;
+return indicator;
 };
-
 // front-end logic
 $(document).ready(function(){
   $("form#pingpong").submit(function(event){
@@ -27,16 +25,21 @@ $(document).ready(function(){
     var tester= numPat.test(number);
     var result = pingPong(number);
     if (number === ""){
-      $("#debug").text("please enter a number").show();
-
+      $("#debug").text("please enter a number");
+      $(".error").show();
+      $(".answer").hide();
     }else if (tester === false) {
-      $("#debug").text("please make sure you only enter numbers").show();
+      $("#debug").text("please make sure you only enter numbers");
+      $(".error").show();
+      $(".answer").hide();
     }else{
-      $("#answers").append(result).show();
-      $("debug").hide();
+      $("#answers").prepend(result);
+      $(".answer").show();
+      $(".error").hide()
     }
-
-
+  });
+  $("button#refresh").click(function(){
+    $("#answers").empty();
 
   });
 });

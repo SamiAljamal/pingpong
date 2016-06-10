@@ -9,36 +9,35 @@
     <title>Ping Pong</title>
   </head>
   <body>
+
     <div class="container">
       <h1>PingPong!</h1>
+
       <div class="jumbotron">
+
         <form id="pingpong">
           <input type="text" id="number">
-
           <label for="number">Please insert a number.</label>
           <hr>
           <button type="submit">Submit!</button>
-
         </form>
+        <br>
+        <button type='submit' id="refresh">Refresh</button>
 
       </div>
+
       <div id="results">
-
-
-        <ul id="answers">
-
-        </ul>
-
-        <p id="debug">
-
-        </p>
-
-
-
-
+          <div class="answer">
+            <ul id="answers">
+            </ul>
+          </div>
+          <div class="error">
+            <div class="jumbotron">
+              <h3 id="debug"></h3>
+            </div>
+          </div>
+        </div>
       </div>
-
-    </div>
 
   </body>
 </html>
